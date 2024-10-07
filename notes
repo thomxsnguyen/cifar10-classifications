@@ -1,0 +1,48 @@
+deep neural networks
+
+introduction
+-cifar 10 is a data set that consists several images divded into the following 10 classes
+~airplanes, car, birds, cats, deer, dogs, frogs, horses, ships, trucks
+-stands for canadian institude for advanced research
+-images have low resolution
+
+-input image with low resolution through classifier which then is going to output the class
+
+how to digitally represent an image?
+-a image is a bunch of pixels, with each pixel containing a value that ranges from 0-225
+-255 (whitest) 155 (gray/middle) 0(black)
+
+cnn (convolutional neural networks)
+-(convulutional layer) erform the convolution first, which is the feature (input) extraction
+-(pooling filters) take the image and compress. improves the computational network and reduce the computational complexity
+-flatten the pixels is able to feed the data to the artifical network
+
+feature detection
+-convolutions use a kernal matrix to apply a filter to obtain a certain effect
+-kernels are used in machine learning for feature extracion to select most important pixels of an image
+-convolution preserves the spatial relationship between pixels. each pixels are spaced out together specifically, called spatial dependency -https://setosa.io/ev/image-kernels/
+
+relu (rectified linear units)
+-relu layers are used to add non-linearity in a feature map
+-it also enhances sparsity or how scattered the feature map is
+-takes any negative number on the feature map and changes it to 0
+
+pooling (downsampling)
+-pooling or down sampling layers are placed after convolutional layers to reduce feature map dimensionality
+-picks the maximum value on the feature map, improves computation efficiency -https://adamharley.com/nn_vis/cnn/2d.html
+
+how to improve network performenace?
+-improve accuracy by adding more feature detector/filters or adding dropout
+-dropout refers dropping out units in a neural network
+-dropouyt is a regularization technique for reducing overfitting in neural network
+
+confusion matrix
+-way to represent results of the classifications
+-true postiives, true negatives,false positives (type 1 error), false negatives (type II error)
+
+key performance indicators (kpi)
+-classification accuracy = (tp + tn) / (tp + tn + fp + fn)
+~tells when the model is accurate
+-missclassification rate(error rate) = (fp + fn) / (tp + tn + fp + fn)
+-precision = tp/total true predictions = tp(tp + fp)
+-recall = (tp) / (tp + fn)
